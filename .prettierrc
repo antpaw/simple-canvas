@@ -1,0 +1,15 @@
+{
+  "singleQuote": true,
+  "bracketSpacing": true,
+  "printWidth": 160,
+  "tabWidth": 2,
+  "endOfLine": "lf",
+  "overrides": [
+    {
+      "files": "*.scss",
+      "options": {
+        "singleQuote": false
+      }
+    }
+  ]
+}
