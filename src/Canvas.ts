@@ -178,14 +178,10 @@ export default class Canvas {
         }
         mouseX = event.offsetX;
         mouseY = event.offsetY;
-        const mouseOffsetXY = {
-          offsetX: mouseX * this.ratio,
-          offsetY: mouseY * this.ratio,
-        };
 
         let needsRender = false;
         // mouseenter
-        const selectedRenderableMouseEnter = this.getElementOfEvent('mouseenter', mouseOffsetXY);
+        const selectedRenderableMouseEnter = this.getElementOfEvent('mouseenter', event);
 
         if (selectedRenderableMouseEnter) {
           if (selectedRenderableMouseEnter !== lastEnteredMouseEnter) {
@@ -209,7 +205,7 @@ export default class Canvas {
         // all drag
         needsRender ||= dragChangeCallback(event);
 
-        const selectedRenderableClick = this.getElementOfEvent('click', mouseOffsetXY);
+        const selectedRenderableClick = this.getElementOfEvent('click', event);
         if (selectedRenderableClick) {
           if (selectedRenderableClick !== lastEnteredDrag) {
             lastEnteredClick = selectedRenderableClick;
