@@ -1,6 +1,6 @@
 {
   "name": "super-simple-canvas",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Canvas Library",
   "main": "index.js",
   "scripts": {
